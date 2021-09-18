@@ -1,0 +1,151 @@
+:root {
+    --primary-color: #141e30;
+    --secondary-color:  rgb(115, 221, 150);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    background: linear-gradient(90deg, #141e30, #243b55);
+    color: var(--primary-color);
+    font-family: 'Poppins', monospace, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container {
+    position: relative;
+    border: 4px var(--primary-color) solid;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 80vh;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    min-width: 100%;
+    left: 0px;
+    background-color: var(--primary-color);
+}
+
+form {
+    display: flex;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+form input, form button {
+    border: none;
+    padding: .8rem; 
+    outline: none;
+    color: #fff;
+    background: #141e30;
+}
+
+form input {
+    min-width: 80%;
+    font-size: 1rem;
+}
+
+form button {
+    min-width: 15%;
+    cursor: pointer;
+}
+
+form button:hover {
+    color: var(--secondary-color);
+}
+
+i.fas {
+    font-size: 2em;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 100%;
+}
+
+.todo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0.5rem;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    padding-left: 0.5rem;
+    transition: all 0.5s ease;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.trash-btn,
+.complete-btn, .editButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6e7275;
+    padding: .5rem;
+    border: none;
+    max-width: 10%;
+    font-size: .3rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.editButton {
+    font-size: .5rem;
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
+
+.trash-btn:hover {
+    background: #e64848;
+}
+
+.complete-btn:hover {
+    background: var(--secondary-color);
+}
+
+.editButton:hover {
+    background: #0a4b61;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
