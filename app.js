@@ -10,7 +10,6 @@ const todoButton = document.querySelector('.todo-button');
 //Event listener
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteComplete);
-todoInput.addEventListener('click', editInput)
 
 //Functions
 
@@ -49,7 +48,16 @@ function addTodo(event) {
      //Clear todo INPUT VALUE
      todoInput.value= '';
      //Edit todo Input value
-     
+     //updated
+    editButton.addEventListener("click", function(e) {
+        e = e || window.event;
+        var target = e.target
+        var parentElement = target.parentElement;
+        var text = parentElement.firstChild.innerHTML;
+        console.log(text)
+        document.querySelector(".todo-input").value = text;
+        parentElement.remove ();
+    })
 }
 
 
@@ -65,12 +73,4 @@ function deleteComplete (e) {
         const todo = item.parentElement;
         todo.classList.toggle('completed');
     }
-}
-
-function editInput (e) { e = e || window.event;
-    var target = e.target || e.srcElement;
-
-
-    console.log(target)
-
 }
